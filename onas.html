@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="windows-1251">
+<title>ООО "Крым-Авто-Дилер"</title>
+<style type="text/css">
+#slide{
+		box-shadow: rgb(144, 238, 144) 20px 20px 20px ;
+		margin-bottom: 30px;
+	}
+	
+</style>
+<link href="Style.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="img/ag_map2.png" type="image/png">
+</head>
+<body>
+<script language="javascript">
+	var URLs=new Array('img/Slider/1.jpg', 'img/Slider/2.jpg','img/Slider/3.jpg','img/Slider/4.jpg','img/Slider/5.jpg','img/Slider/6.jpg','img/Slider/7.jpg','img/Slider/8.jpg','img/Slider/9.jpg','img/Slider/10.jpg');
+	var currentImage=0;
+	function show(direction)
+	{
+		currentImage+=direction;
+		if(currentImage==URLs.length)
+			currentImage=0;
+		if(currentImage==-1)
+			currentImage=URLs.length-1;
+		document.getElementById('slide').setAttribute('src',URLs[currentImage]);
+	}
+	function getRadioValue(radioObject)
+			{
+				var value=null;
+				for(var i=0;i<radioObject.length;i++)
+				{
+					if(radioObject[i].checked)
+						value=radioObject[i].value;
+				}
+				return value;
+			}
+			function result(){
+				var r=0,nr=0;
+				var v1=getRadioValue(form1.RG1);
+				var v2=getRadioValue(form1.RG2);
+				var v3=getRadioValue(form1.RG3);
+				if(v1!="true"&&v1!="false")
+				{
+					eror();
+					return 0;
+				}
+					else
+						if(v1=="true")	r++; else nr++;
+					
+				if(v2!="true"&&v2!="false")
+				{
+					eror();
+					return 0;
+				}
+					else
+						if(v2=="true")	r++; else nr++;
+				
+				if(v3!="true"&&v3!="false")
+				{
+					eror();
+					return 0;
+				}
+					else
+						if(v3=="true")	r++; else nr++;
+					window.alert("Подтвердите действие:\n\n"+"Результаты: "+form1.label.value+"\n Правильных ответов: "+r+"\n Неправильных ответов: "+nr);
+			}
+			function eror(){
+				window.alert("Уважаемый, "+form1.label.value+"!\n Вы не ответили на 1 вопрос и НЕ ПРОШЛИ ТЕСТ!");
+			} 
+		
+</script>
+<div class="page1">
+<header>
+	<div class="up-header">
+		<a href="index.html"><img id="img1" src="img/logo.gif" ></a>
+			<div class="heder-text">
+			<a id="text1">ООО "Крым-Авто-Дилер"</a>
+			</div>
+	</div>
+
+	<div class="up-menu">
+		<ul>
+			<li> <a href="index.html">Главная</a></li>
+			<li><a href="catalog.html">Каталог</a></li>
+			<li><a href="stock.html">Акции и предложения</a></li>
+			<li><a href="contact.html">Контакты</a></li>
+			<li><a href="onas.html">О нас</a></li>
+		</ul>
+	</div>
+</header>
+
+<div class="tabl-index-onas">
+<h2>Презинтация нашего Автосалона</h2>
+<div align="center" >
+	<img src="img/slider/left.png" width="50px" onClick="show(-1);" style="margin-bottom: 230px"> 
+
+	<img id="slide" src="img/Slider/1.jpg" alt="Автосалон" width="800" height="500">
+
+	<img src="img/slider/right .png" width="50px" onClick="show(+1);" style="margin-left:10px; margin-bottom: 230px">
+	
+	<div class="test">
+		<form name="form1">
+		<table border="1" align="center" cellspacing="0" margin-left="40px">
+		<div>
+			<h1 align="center">Проверьте свои знания как истинный Автомобилист.</h1>
+			<h3 align="center">(Пожалуйста не пропускайте вопросы и не забудте ввести свое имя.)</h3>
+			<div> 
+				<tr>
+					<td align="center">Введите имя <input type="text" name="label"></td>
+				</tr>
+				<tr><td>
+				<div>
+					<em>1. Немецкой маркой автомобиля является:</em><br>
+					<label><input name="RG1" type="radio" value="true">BMW</label> <br>
+					<label><input name="RG1" type="radio" value="false">MAZDA</label> <br>
+					<label><input name="RG1" type="radio" value="false">FORD</label> <br>
+				</div></td>
+				<tr><td>
+				<div>
+					<em>2.Какая страна является производителем марки автомобилей Mersedes-Bens?</em><br>
+					<label><input name="RG2" type="radio" value="false">Италия</label> <br>
+					<label><input name="RG2" type="radio" value="false">Россия</label> <br>
+					<label><input name="RG2" type="radio" value="true">Германия</label> <br>
+				</div></td></tr>
+				<tr><td><div>
+					<em>3.Какой из перечисленных ниже автомобилей является производством России? </em><br>
+					<label><input name="RG3" type="radio" value="true">ВАЗ "Патриот" </label> <br>
+					<label><input name="RG3" type="radio" value="false">BMW M5 </label> <br>
+					<label><input name="RG3" type="radio" value="false">Dacha s5</label> <br>
+				</div></td></tr>
+				
+				<tr><td><div align="center">
+					<input type="button" value="Результат" onClick="result()">
+				</div></td></tr>
+				</td>
+				</tr>
+			</div>
+		</div>
+		</center>
+		</form>
+		</table>
+	</div>
+	
+</div>
+</div>
+
+</div>
+	<footer class="footer">
+	<div class="left-text"><h2>Мы в соц сетях: </h2></div>
+	<div class="social">
+		<a href="https://vk.com/id22118212"><img src="img/icon/VK_Color.png"></a>
+		<a href="https://www.instagram.com/marokkayalta/"><img src="img/icon/Instagram_Color.png"></a>
+		<a href="https://www.facebook.com/profile.php?id=100008113576370"><img src="img/icon/Facebook_Color.png"></a>
+	</div>
+</footer>
+	</div>
+</body>
+</html>
