@@ -12556,13 +12556,13 @@ input[type="submit"].form-control:focus {
   background: #1ca3db;
 }
 .social-icons li .si-behance i::after {
-  content: "\f1b4";
+  content: "\f189";
 }
 .social-icons li .si-dribbble {
   background: #dc90af;
 }
 .social-icons li .si-dribbble i::after {
-  content: "\f17d";
+  content: "\f1a0";
 }
 .social-icons li .si-rss {
   background: #f5b800;
