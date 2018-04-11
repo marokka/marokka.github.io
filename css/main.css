@@ -2573,6 +2573,8 @@ li.tg-rss a { background:#ff6600; }
 .tg-topdestination{
 	width:100%;
 	float:left;
+	height: 250px;
+
 }
 .tg-topdestination figure{
 	width: 100%;
